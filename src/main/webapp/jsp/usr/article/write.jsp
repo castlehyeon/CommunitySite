@@ -23,15 +23,18 @@ function ArticleSave__submitForm(form) {
     form.submit();
 }
 </script>
-
+<!--form 태그는 양식을 작성할 때 사용한다. -->
+<!--return false가 여기서 쓰인 거구나? 위에 <Script>단에서 ArticleSave__submitForm에 대한 함수정의를 한거고. this는 해당 form을 가리키고. -->
 <form method="POST" onsubmit="ArticleSave__submitForm(this); return false;">
+    <!--form의 버튼을 누른다. => URL생성기 -->
     <div>
         <span>제목</span>
         <div>
             <input name="title" type="text" maxlength="50" placeholder="제목을 입력해주세요." />
+            <!-- 단순히 Html태그를 사용한 코드 -->
+            <!-- name은 중요하다. url의 파라미터로 넘길 때 이름이다. -->
         </div>
     </div>
-
     <div>
         <span>내용</span>
         <div>

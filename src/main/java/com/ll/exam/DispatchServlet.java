@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/usr/*")
 public class DispatchServlet extends HttpServlet {
+    //현재로서는 분기하는 역
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         Rq rq = new Rq(req, resp);
